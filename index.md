@@ -5,12 +5,15 @@ has_children: false
 nav_order: 1
 ---
 
-# Project title
+# OrecchietTetris
+
+![OrecchietTetris logo](pictures/logo.png)
 
 ### Authors
 
-- [Giovanni Ciatto](mailto:giovanni.ciatto@unibo.it)
-- [Davide Domini](mailto:davide.domini@unibo.it)
+- [Colonna Mariagrazia](mailto:mariagrazia.colonna@studio.unibo.it)
+- [De Cillis Mirko](mailto:mirko.decillis@studio.unibo.it)
+- [Pennisi Lorenza](mailto:lorenza.pennisi@studio.unibo.it)
 
 ## Abstract
 
