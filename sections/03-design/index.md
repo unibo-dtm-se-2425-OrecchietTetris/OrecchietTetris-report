@@ -89,7 +89,7 @@ In the classic separation, the Controller is a distinct component; here, instead
 
 Keyboard input is handled entirely inside `GameScreen`. When the screen is shown, it requests the keyboard from the Kivy `Window` (`Window.request_keyboard`) and binds `on_key_down`; when hidden, it unbinds and releases the keyboard so no other screen receives unwanted input. The handler `_on_key_down` maps each key to an explicit Model method and dispatches the UI-only concerns (pause, quit confirmation, music toggle, track change) locally. It contains no game logic itself: the Model decides whether a move is legal and, in turn, notifies the View through events. This preserves the one-directional dependency described earlier: the View calls into the Model, the Model answers back only via Observer events.
 
-> Kivy was chosen because it is the only library that combines GPU-accelerated canvas drawing, a native widget system and a dedicated frame clock in a single framework. Its canvas redraws the grid, the ghost piece and the line-clear animations efficiently. Tkinter offers a similar Canvas widget, but it is impractical for high-frame-rate animation. Pygame handles low-level rendering and timing well, but it lacks a native widget toolkit, so menus and the leaderboard would have to be built by hand or with third-party libraries.
+> Kivy was chosen over the alternatives considered (Tkinter, Pygame) for reasons detailed in the [Development](../04-development/) chapter.
 
 #### Composition Root
 
