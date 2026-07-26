@@ -10,3 +10,13 @@ nav_order: 13
 - Each member must self-evaluate their work, listing the strengths and weaknesses of the product
 - Each member must describe their role within the group as objectively as possible
     + Each student is only responsible for their own section
+
+## Mariagrazia Colonna
+
+
+
+## Mirko de Cillis
+
+
+
+## Lorenza Pennisi
