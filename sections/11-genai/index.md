@@ -6,13 +6,13 @@ nav_order: 12
 
 # Usage of Generative AI
 
-This chapter documents how generative AI was used throughout the development of OrecchietTetris, following the AI-DECLARATION.md standard, and explains the general criteria we followed when prompting and reviewing AI-generated work.
+This section documents how generative AI was used throughout the development of OrecchietTetris, following the AI-DECLARATION.md standard, and explains the general criteria we followed when prompting and reviewing AI-generated work.
 
 ## AI declaration
 
 The table below summarizes our AI usage per process and per component, as tracked in [`AI-DECLARATION.md`](https://github.com/unibo-dtm-se-2425-OrecchietTetris/OrecchietTetris-artifact/blob/master/AI-DECLARATION.md) at the root of the artifact repository.
 
-```
+```md
 - version: `0.1.2`
 - level: `copilot`
 - Processes:
