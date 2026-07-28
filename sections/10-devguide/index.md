@@ -22,7 +22,7 @@ The style is enforced by flake8 and by a strict mypy configuration (untyped defi
 
 ### Versioning and Development Workflow
 
-The team follows the **Conventional Commits** specification, enforced by **commitlint** through a `commit-msg` hook. Please refer to [Development](../04-development/) chapter for more information regarding the adopted Git workflow.
+The team follows the **Conventional Commits** specification, enforced by **commitlint** through a `commit-msg` hook. Please refer to [Development](../04-development/) section for more information regarding the adopted Git workflow.
 
 > It is strongly suggested to install pre-commit hooks to enforce such specification. See section "Development Environment Setup" below.
 

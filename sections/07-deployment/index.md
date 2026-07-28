@@ -18,7 +18,9 @@ To install OrecchietTetris, run the following commands in your terminal. You can
 pip install OrecchietTetris
 OrecchietTetris
 ```
+
 Once the installation has been completed successfully, launching the command:
+
 ```bash
 # Windows (cmd)
 python -m OrecchietTetris 
@@ -26,6 +28,7 @@ python -m OrecchietTetris
 # macOS / Linux
 OrecchietTetris
 ```
+
 it will bring up the main menu of the game.
 
 ### From source
@@ -48,7 +51,9 @@ it will bring up the main menu of the game.
     ```bash
     poetry install
     ```
+
 4. Run the game with the command:
+
     ```bash
     poetry run OrecchietTetris
     ```

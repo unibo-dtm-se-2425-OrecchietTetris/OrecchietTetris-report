@@ -6,7 +6,7 @@ nav_order: 12
 
 # Usage of Generative AI
 
-This chapter documents how generative AI was used throughout the development of OrecchietTetris, following the AI-DECLARATION.md standard, and explains the general criteria we followed when prompting and reviewing AI-generated work.
+This section documents how generative AI was used throughout the development of OrecchietTetris, following the AI-DECLARATION.md standard, and explains the general criteria we followed when prompting and reviewing AI-generated work.
 
 ## AI declaration
 

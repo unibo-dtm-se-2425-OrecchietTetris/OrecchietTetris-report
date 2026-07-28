@@ -122,7 +122,7 @@ What is verified automatically at system level is the environment in which the a
 
 ## Manual Acceptance Tests
 
-The acceptance tests were executed by hand on the assembled application following the plan below. The plan is written so that another person can repeat it exactly. Each test corresponds to one acceptance criterion of the Requirements chapter.
+The acceptance tests were executed by hand on the assembled application following the plan below. The plan is written so that another person can repeat it exactly. Each test corresponds to one acceptance criterion of the Requirements section.
 
 | Requirement | Steps | Expected result |
 | ----------- | ----- | --------------- |

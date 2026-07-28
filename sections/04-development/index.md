@@ -19,7 +19,7 @@ In the project, Git was used as the DVCS, with the remote repository hosted on G
 - Each branch is modified by one, and only one, of the authors, except for changes necessary after code review by the reviewer once the Pull Request was created.
 
 This workflow keeps `master` continuously updated with completed features, maintaining it as a single source of truth. Fast merges also reduces branch divergences and, consequently, the frequency of merge conflicts, since all the branches are "born" up to date.
-For each new task (i.e. a new feature or a bug fix), a new branch was created, onto which all related commits are pushed. Once the task is complete, a Pull Request is opened for merging into `master`. Before a pull request is accepted, automatic checks are run (static analysis and tests execution), followed by a manual code review from another author. Once all checks pass and the review is approved, the pull request is merged. The merged branch is deleted to keep the Git tree clean, and deployment automations is triggered (see [CI/CD](../08-cicd/) chapter for further details).
+For each new task (i.e. a new feature or a bug fix), a new branch was created, onto which all related commits are pushed. Once the task is complete, a Pull Request is opened for merging into `master`. Before a pull request is accepted, automatic checks are run (static analysis and tests execution), followed by a manual code review from another author. Once all checks pass and the review is approved, the pull request is merged. The merged branch is deleted to keep the Git tree clean, and deployment automations is triggered (see [CI/CD](../08-cicd/) section for further details).
 
 > In rare cases, a `dev` branch was used to group several minor changes into a single branch before merging into `master`, in order to avoid triggering the deployment workflow (through GitHub Action), and the consequent version update, too frequently. In rarer cases, for hotfixes, a commit was pushed directly to `master` rather than creating a dedicated branch.
 
@@ -67,12 +67,12 @@ The persistence layer needs no external library: the leaderboard is a small flat
 | Tool | Role |
 | ---- | ---- |
 | Poetry | Dependency management, virtual-env handling and the build backend (`poetry-core`) that produces the sdist + wheel |
-| pytest + pytest-cov | Test runner and coverage, chosen for `assert` introspection and fixtures (see [Validation](../05-validation/) chapter) |
+| pytest + pytest-cov | Test runner and coverage, chosen for `assert` introspection and fixtures (see [Validation](../05-validation/) section) |
 | coverage | Coverage measurement and HTML report |
 | mypy | Strict static type checking (see the strict `[tool.mypy]` config) |
 | flake8 | Linting / style enforcement |
 | poethepoet (`poe`) | Task runner defining the `test`, `coverage`, `mypy`, `flake8`, and other commands in one place |
 | pre-commit | Git hooks, including the `commit-msg` hook that runs commitlint to enforce Conventional Commits |
-| semantic-release + commitlint | Automated SemVer versioning, changelog, tagging and releasing (see the versioning section in [Release](../06-release/) chapter) |
+| semantic-release + commitlint | Automated SemVer versioning, changelog, tagging and releasing (see the versioning section in [Release](../06-release/) section) |
 
 The only Node.js (npm) dependencies are `semantic-release` and `commitlint`, declared in `package.json`: they belong to the JavaScript ecosystem because `semantic-release` — the de-facto standard for automated, commit-driven SemVer releasing — is an npm tool with no equivalent Python port, so it is used only in the CI/CD pipeline (not at runtime) to analyse commits, tag versions and publish releases.
