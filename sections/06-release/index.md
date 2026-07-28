@@ -51,37 +51,10 @@ Since all release artefacts are generated from the same codebase, they always sh
 
 ### Creating a New Release
 
-To create a new release of OrecchietTetris, the following procedure should be followed:
+As stated earlier, the CI/CD workflow is in charge of: updating the application version and the changelog, releasing the new version and creating the tag of the new version. An update of the application is released everytime a commit is pushed or a branch is merged to the branch `master` and the changes committed are so that an upgrade of the version is necessary. The last condition is also automated by the application of the Conventional Commit specification, as described in [Development](../04-development/) section; in this way, the level of the version change depends on the type of the commit. The version is upgraded accordingly to the highest level of change brought by the commits pushed:
 
-1. Create a dedicated release branch if necessary:
+- a `fix` commit leads to a `PATCH` level update;
+- a `feat` commit leads to a `MINOR` level update;
+- a `BREAKING CHANGE` commit leads to a `MAJOR` level update.
 
-```bash
-git checkout -b release/X.Y.Z
-```
-
-2. Update the project version according to the Semantic Versioning rules.
-
-3. Update the `CHANGELOG.md` file with the changes included in the new release.
-
-4. Commit and merge the changes into the main branch:
-
-```bash
-git add .
-git commit -m "Prepare release X.Y.Z"
-git push
-```
-
-5. Create an annotated Git tag:
-
-```bash
-git tag -a X.Y.Z -m "Release X.Y.Z"
-```
-
-6. Push the tag to GitHub:
-
-```bash
-git push origin X.Y.Z
-```
-
-7. The GitHub Actions deployment workflow is automatically triggered, generating the release artefacts, publishing them to the configured repositories, and creating the corresponding GitHub Release.
-
+Any other type of commit will not update the version at any level.
